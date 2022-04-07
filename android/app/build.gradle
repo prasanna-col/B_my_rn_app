@@ -207,17 +207,16 @@ android {
 }
 
 dependencies {
-
-    implementation 'com.android.support:multidex:1.0.3' 
-    implementation("com.google.firebase:firebase-iid")
-    implementation "com.google.android.gms:play-services-base:17.0.0"
-    implementation "com.google.android.gms:play-services-gcm:17.0.0"
-    implementation "com.google.android.gms:play-services-analytics:17.0.0"
-    implementation "com.google.firebase:firebase-core:15.0.2"
-    // implementation "com.google.firebase:firebase-messaging:15.0.2"
-    implementation 'com.google.firebase:firebase-messaging:21.1.0'
-    implementation project(':react-native-firebase')
-
+    
+    // for push notification with react-native-firebase npm  -----
+    // implementation 'com.android.support:multidex:1.0.3' 
+    // implementation("com.google.firebase:firebase-iid")
+    // implementation "com.google.android.gms:play-services-base:17.0.0"
+    // implementation "com.google.android.gms:play-services-gcm:17.0.0"
+    // implementation "com.google.android.gms:play-services-analytics:17.0.0"
+    // implementation "com.google.firebase:firebase-core:15.0.2"
+    // implementation 'com.google.firebase:firebase-messaging:21.1.0'
+    // -------
     
 
 

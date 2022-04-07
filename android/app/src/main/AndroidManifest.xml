@@ -17,13 +17,12 @@
     </activity>
 
     <!--PUSH NOTIFICATION-->
-    <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="facia_app"/>
+    <!-- <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="my_rn_app"/>
     <service android:name="io.invertase.firebase.messaging.RNFirebaseMessagingService">
       <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
       </intent-filter>
     </service>
-    <!-- <service android:name="com.facia_app.service_provider.FirebaseMessageService" android:exported="false"><intent-filter><action android:name="com.google.firebase.MESSAGING_EVENT" /></intent-filter></service> -->
     <service android:name="io.invertase.firebase.messaging.RNFirebaseInstanceIdService">
       <intent-filter>
         <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
@@ -38,6 +37,8 @@
         <category android:name="android.intent.category.DEFAULT" />
       </intent-filter>
     </receiver>
-    <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService" />
+    <service android:name="io.invertase.firebase.messaging.RNFirebaseBackgroundMessagingService" /> -->
+    <!--PUSH NOTIFICATION-->
+
   </application>
 </manifest>
