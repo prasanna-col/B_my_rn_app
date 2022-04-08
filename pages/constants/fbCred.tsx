@@ -3,7 +3,9 @@ module.exports={
     Key_Hash_release:"zY00cczs2SG28RTn1bZQvsCftvI=",
     app_id:"5522180067812088",
     app_sec:"4af877d06adfade5345786a0045be7d9",
-    privacy_policy:"https://www.termsfeed.com/live/38b27d3d-a4e4-48a7-b3ca-259b2670884e"  // need to generate, its free
+    privacy_policy:"https://www.termsfeed.com/live/38b27d3d-a4e4-48a7-b3ca-259b2670884e",  // need to generate, its free
+    client_ID:"a8476289d73205b534a55eb0290873f6",
+    
 }
 
 
