@@ -11,13 +11,15 @@ import SecondPage from "./pages/SecondPage";
 import FBpushFunc from "./pages/FBpushFunc"
 import LayoutAnimation_screen from "./pages/LayoutAnimation";
 import GoogleSignIn_screen from "./pages/socialLogin/googleSignIn";
+import FBLogin from "./pages/socialLogin/fbLogin";
+
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="FBpushFunc"
+        initialRouteName="FBLogin"
         screenOptions={{
           headerShown: false,
         }}
@@ -43,6 +45,8 @@ const App = () => {
         <Stack.Screen name="LayoutAnimation_screen" component={LayoutAnimation_screen} />
 
         <Stack.Screen name="GoogleSignIn_screen" component={GoogleSignIn_screen} />
+
+        <Stack.Screen name="FBLogin" component={FBLogin} />
         
       </Stack.Navigator>
     </NavigationContainer>

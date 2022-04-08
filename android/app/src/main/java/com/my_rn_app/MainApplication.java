@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // import io.invertase.firebase.RNFirebasePackage;
 import com.gevorg.reactlibrary.RNQrGeneratorPackage;
 import com.reactnativecommunity.art.ARTPackage;
@@ -15,6 +16,13 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 // import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 // import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
+
+
+// fb
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
+import com.facebook.CallbackManager;
+
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -34,6 +42,8 @@ public class MainApplication extends Application implements ReactApplication {
          
           // packages.add(new RNFirebaseMessagingPackage());
           // packages.add( new RNFirebaseNotificationsPackage());
+          // packages.add( new getCallbackManager());
+          
 
           return packages;
         }

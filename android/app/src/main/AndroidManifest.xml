@@ -8,6 +8,9 @@
   <uses-permission android:name="android.permission.CAMERA" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
+<!-- FB login -->
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+        
   <application android:name=".MainApplication" android:label="@string/app_name" android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:allowBackup="false" android:theme="@style/AppTheme">
     <activity android:name=".MainActivity" android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:launchMode="singleTask" android:windowSoftInputMode="adjustResize">
       <intent-filter>
@@ -15,6 +18,20 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
+
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+    <!-- <meta-data android:name="com.facebook.sdk.ClientToken" android:value="@string/facebook_client_token"/> -->
+
+    <activity android:name="com.facebook.FacebookActivity" android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation" android:label="@string/app_name" />
+    <activity android:name="com.facebook.CustomTabActivity" android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+       <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+<!-- FB login -->
+
 
     <!--PUSH NOTIFICATION-->
     <!-- <meta-data android:name="com.google.firebase.messaging.default_notification_channel_id" android:value="my_rn_app"/>

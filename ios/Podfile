@@ -18,6 +18,8 @@ target 'my_rn_app' do
 
   # pod 'RNFirebase', :path => '../node_modules/react-native-firebase'
   
+  pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
+
   target 'my_rn_appTests' do
     inherit! :complete
     # Pods for testing
