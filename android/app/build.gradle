@@ -223,9 +223,10 @@ dependencies {
     // implementation 'com.facebook.android:facebook-android-sdk:4.34.0'
     implementation 'com.facebook.android:facebook-android-sdk:latest.release'
 
-
     implementation platform('com.google.firebase:firebase-bom:29.2.0')
     implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.google.firebase:firebase-inappmessaging-display'
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
     //noinspection GradleDynamicVersion

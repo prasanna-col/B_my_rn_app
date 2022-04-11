@@ -12,6 +12,8 @@ import FBpushFunc from "./pages/FBpushFunc"
 import LayoutAnimation_screen from "./pages/LayoutAnimation";
 import GoogleSignIn_screen from "./pages/socialLogin/googleSignIn";
 import FBLogin from "./pages/socialLogin/fbLogin";
+import Inappmsg from "./pages/Inappmsg";
+import AdMob from './pages/AdMob';
 
 const Stack = createStackNavigator();
 
@@ -19,7 +21,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="FBLogin"
+        initialRouteName="AdMob"
         screenOptions={{
           headerShown: false,
         }}
@@ -47,6 +49,10 @@ const App = () => {
         <Stack.Screen name="GoogleSignIn_screen" component={GoogleSignIn_screen} />
 
         <Stack.Screen name="FBLogin" component={FBLogin} />
+
+        <Stack.Screen name="Inappmsg" component={Inappmsg} />
+        
+        <Stack.Screen name="AdMob" component={AdMob} />
         
       </Stack.Navigator>
     </NavigationContainer>

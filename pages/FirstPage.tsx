@@ -11,13 +11,14 @@ import {
   Image,
   Dimensions, TouchableOpacity
 } from 'react-native';
-import { Colors } from './Colors';
+import { Colors } from './assets/Colors';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
-const Style_path = require('./Styles');
+const Style_path = require('./assets/Styles');
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+const QR_img = require('./assets/img/qrimg.png')
 const FirstPage = ({ navigation }) => {
   const [userName, setUserName] = useState('AboutReact');
 
@@ -34,7 +35,7 @@ const FirstPage = ({ navigation }) => {
       <>
         <View style={Style_path.itemview}>
           <View style={Style_path.imgbgInside}>
-            <Image source={require('./assets/qrimg.png')} style={Style_path.iconstyle} />
+            <Image source={QR_img} style={Style_path.iconstyle} />
           </View>
           <View style={Style_path.itemtextView}>
             <Text style={Style_path.itemtxt1}>Step 1</Text>
@@ -44,7 +45,7 @@ const FirstPage = ({ navigation }) => {
 
         <View style={Style_path.itemview}>
           <View style={Style_path.imgbgInside}>
-            <Image source={require('./assets/qrimg.png')} style={Style_path.iconstyle} />
+            <Image source={QR_img} style={Style_path.iconstyle} />
           </View>
           <View style={Style_path.itemtextView}>
             <Text style={Style_path.itemtxt1}>Step 1</Text>
@@ -53,7 +54,7 @@ const FirstPage = ({ navigation }) => {
         </View>
         <View style={Style_path.itemview}>
           <View style={Style_path.imgbgInside}>
-            <Image source={require('./assets/qrimg.png')} style={Style_path.iconstyle} />
+            <Image source={QR_img} style={Style_path.iconstyle} />
           </View>
           <View style={Style_path.itemtextView}>
             <Text style={Style_path.itemtxt1}>Step 1</Text>
@@ -62,7 +63,7 @@ const FirstPage = ({ navigation }) => {
         </View>
         <View style={Style_path.itemview}>
           <View style={Style_path.imgbgInside}>
-            <Image source={require('./assets/qrimg.png')} style={Style_path.iconstyle} />
+            <Image source={QR_img} style={Style_path.iconstyle} />
           </View>
           <View style={Style_path.itemtextView}>
             <Text style={Style_path.itemtxt1}>Step 1</Text>
@@ -76,7 +77,7 @@ const FirstPage = ({ navigation }) => {
       //   renderItem={(item, index) =>
       //     <View style={Style_path.itemview}>
       //       <View style={Style_path.imgbgInside}>
-      //         <Image source={require('./assets/qrimg.png')} style={Style_path.iconstyle} />
+      //         <Image source={QR_img} style={Style_path.iconstyle} />
       //       </View>
       //       <View style={Style_path.itemtextView}>
       //         <Text style={Style_path.itemtxt1}>Step 1</Text>
@@ -114,7 +115,7 @@ const FirstPage = ({ navigation }) => {
 
       <View style={Style_path.orderBtnView}>
         <TouchableOpacity style={Style_path.order_btn}>
-          <Image source={require('./assets/qrimg.png')} style={Style_path.btnImg} />
+          <Image source={QR_img} style={Style_path.btnImg} />
           <Text style={Style_path.order_txt}>Order New QR Kit</Text>
         </TouchableOpacity>
       </View>
