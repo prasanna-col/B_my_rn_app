@@ -15,14 +15,14 @@ import FBLogin from "./pages/socialLogin/fbLogin";
 import Inappmsg from "./pages/Inappmsg";
 import AdMob from './pages/AdMob';
 
-import Profile from './pages/Profile'
+import Register from './pages/Register'
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Profile"
+        initialRouteName="Register"
         screenOptions={{
           headerShown: false,
         }}
@@ -55,7 +55,7 @@ const App = () => {
         
         <Stack.Screen name="AdMob" component={AdMob} />
 
-        <Stack.Screen name="Profile" component={Profile} />
+        <Stack.Screen name="Register" component={Register} />
         
         
       </Stack.Navigator>
