@@ -14,15 +14,17 @@ import GoogleSignIn_screen from "./pages/socialLogin/googleSignIn";
 import FBLogin from "./pages/socialLogin/fbLogin";
 import Inappmsg from "./pages/Inappmsg";
 import AdMob from './pages/AdMob';
-
 import Register from './pages/Register'
+import VideoCompress from './pages/VideoCompress'
+import EmailInput from './pages/emailInput'
+
 const Stack = createStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="Register"
+        initialRouteName="EmailInput"
         screenOptions={{
           headerShown: false,
         }}
@@ -45,6 +47,7 @@ const App = () => {
 
         {/* <Stack.Screen name="PushNotification" component={PushNotification} /> */}
         <Stack.Screen name="FBpushFunc" component={FBpushFunc} />
+
         <Stack.Screen name="LayoutAnimation_screen" component={LayoutAnimation_screen} />
 
         <Stack.Screen name="GoogleSignIn_screen" component={GoogleSignIn_screen} />
@@ -52,12 +55,15 @@ const App = () => {
         <Stack.Screen name="FBLogin" component={FBLogin} />
 
         <Stack.Screen name="Inappmsg" component={Inappmsg} />
-        
+
         <Stack.Screen name="AdMob" component={AdMob} />
 
         <Stack.Screen name="Register" component={Register} />
-        
-        
+
+        <Stack.Screen name="VideoCompress" component={VideoCompress} />
+
+        <Stack.Screen name="EmailInput" component={EmailInput} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

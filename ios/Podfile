@@ -20,6 +20,10 @@ target 'my_rn_app' do
   
   pod 'react-native-fbsdk', :path => '../node_modules/react-native-fbsdk'
 
+  pod 'react-native-compressor', :path => '../node_modules/react-native-compressor'
+
+  pod 'react-native-video-helper', :path => '../node_modules/react-native-video-helper'
+
   target 'my_rn_appTests' do
     inherit! :complete
     # Pods for testing

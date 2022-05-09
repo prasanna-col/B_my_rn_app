@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.reactnativevideohelper.RNVideoHelperPackage;
+import com.reactnativecompressor.CompressorPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
 // import io.invertase.firebase.RNFirebasePackage;
 import com.gevorg.reactlibrary.RNQrGeneratorPackage;
