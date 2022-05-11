@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EmailInput /> should match the snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+        "paddingHorizontal": 20,
+        "paddingVertical": 10,
+      }
+    }
+  >
+    <TextInput
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Email"
+      placeholderTextColor="#9a73ef"
+      style={
+        Object {
+          "borderColor": "#7a42f4",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 15,
+        }
+      }
+      testID="email-input"
+      underlineColorAndroid="transparent"
+      value=""
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "marginBottom": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fdd851",
+          "borderRadius": 5,
+          "flexDirection": "row",
+          "height": 50,
+          "justifyContent": "center",
+          "marginHorizontal": 20,
+          "opacity": 1,
+          "width": "90%",
+        }
+      }
+      testID="submit-btn"
+    >
+      <Text
+        style={
+          Object {
+            "color": "#000",
+            "fontSize": 16,
+            "fontWeight": "500",
+            "paddingLeft": 10,
+          }
+        }
+      >
+        Sumbit
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

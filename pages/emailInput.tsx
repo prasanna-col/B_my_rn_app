@@ -17,12 +17,16 @@ const EmailInput = ({ navigation }) => {
         // let reg = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([\t]*\r\n)?[\t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([\t]*\r\n)?[\t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i; //expression3
 
         if (reg.test(text) === false) {
-            alert("Email is Not Correct");
+            Alert.alert("Email is Not Correct");
             return false;
         }
         else {
-            alert("Email is Correct");
+            Alert.alert("Email is Correct");
         }
+    }
+
+    const on_submit = () =>{
+        validateEmail(email)
     }
 
     return (
@@ -30,6 +34,7 @@ const EmailInput = ({ navigation }) => {
 
             <View style={styles.feedback_view}>
                 <TextInput
+                testID="email-input"
                     style={{
                         margin: 15,
                         height: 40,
@@ -47,6 +52,7 @@ const EmailInput = ({ navigation }) => {
 
             <View style={styles.orderBtnView}>
                 <TouchableOpacity style={styles.order_btn}
+                testID="submit-btn"
                     onPress={() => { validateEmail(email) }}
                 >
                     <Text style={styles.order_txt}>Sumbit</Text>
