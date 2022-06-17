@@ -1,30 +1,34 @@
 // React Native Pass Value From One Screen to Another Using React Navigation
 // https://aboutreact.com/react-native-pass-value-from-one-screen-to-another-using-react-navigation/
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+
 import { SafeAreaView, TextInput, View, StyleSheet, Text, Alert, Dimensions, Button, TouchableOpacity } from 'react-native';
 import { Colors } from './assets/Colors';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
+import {AppContext} from "../context"
 const EmailInput = ({ navigation }) => {
+
+    const { userName, validateEmail } = useContext(AppContext);
     const [email, setEmail] = useState('');
 
-    const validateEmail = (text) => {
+    // const validateEmail = (text) => {
 
-        // // let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/; // expression1
-        let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // expression2
-        // let reg = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([\t]*\r\n)?[\t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([\t]*\r\n)?[\t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i; //expression3
+    //     // // let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/; // expression1
+    //     let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; // expression2
+    //     // let reg = /(?!.*\.{2})^([a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+(\.[a-z\d!#$%&'*+\-\/=?^_`{|}~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]+)*|"((([\t]*\r\n)?[\t]+)?([\x01-\x08\x0b\x0c\x0e-\x1f\x7f\x21\x23-\x5b\x5d-\x7e\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|\\[\x01-\x09\x0b\x0c\x0d-\x7f\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))*(([\t]*\r\n)?[\t]+)?")@(([a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\d\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.)+([a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]|[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF][a-z\d\-._~\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]*[a-z\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])\.?$/i; //expression3
 
-        if (reg.test(text) === false) {
-            Alert.alert("Email is Not Correct");
-            return false;
-        }
-        else {
-            Alert.alert("Email is Correct");
-            return true
-        }
-    }
+    //     if (reg.test(text) === false) {
+    //         Alert.alert("Email is Not Correct");
+    //         return false;
+    //     }
+    //     else {
+    //         Alert.alert("Email is Correct");
+    //         return true
+    //     }
+    // }
     const dataFunc = (x) => {
         return 5 * x
     }
@@ -41,6 +45,7 @@ const EmailInput = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: Colors.white }}>
 
             <View style={styles.feedback_view}>
+                
                 <TextInput
                     testID="email-input"
                     style={{
@@ -56,6 +61,7 @@ const EmailInput = ({ navigation }) => {
                     onChangeText={(text) => { setEmail(text) }}
                     value={email}
                 />
+                <Text>context data -- username: {userName}</Text>
 
                 <TextInput
                     placeholder='Email Address'
