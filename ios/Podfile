@@ -24,6 +24,8 @@ target 'my_rn_app' do
 
   pod 'react-native-video-helper', :path => '../node_modules/react-native-video-helper'
 
+  pod 'RNKeychain', :path => '../node_modules/react-native-keychain'
+
   target 'my_rn_appTests' do
     inherit! :complete
     # Pods for testing

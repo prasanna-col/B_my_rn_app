@@ -234,6 +234,10 @@ dependencies {
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
+
+    // for firebase analytics
+    implementation project(path: ":@react-native-firebase_analytics")
+
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
     }

@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.oblador.keychain.KeychainPackage;
 import com.reactnativevideohelper.RNVideoHelperPackage;
 import com.reactnativecompressor.CompressorPackage;
 import com.facebook.reactnative.androidsdk.FBSDKPackage;
@@ -25,6 +26,8 @@ import com.facebook.FacebookSdk;
 import com.facebook.appevents.AppEventsLogger;
 import com.facebook.CallbackManager;
 
+// firebase analytics
+import io.invertase.firebase.analytics.ReactNativeFirebaseAnalyticsPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -45,6 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new RNFirebaseMessagingPackage());
           // packages.add( new RNFirebaseNotificationsPackage());
           // packages.add( new getCallbackManager());
+          packages.add(new ReactNativeFirebaseAnalyticsPackage());
           
 
           return packages;

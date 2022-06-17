@@ -2,7 +2,7 @@
 // https://aboutreact.com/react-native-pass-value-from-one-screen-to-another-using-react-navigation/
 
 import React, { useState } from 'react';
-import { SafeAreaView, TextInput, View,StyleSheet, Text, Alert, Dimensions, TouchableOpacity } from 'react-native';
+import { SafeAreaView, TextInput, View, StyleSheet, Text, Alert, Dimensions, Button, TouchableOpacity } from 'react-native';
 import { Colors } from './assets/Colors';
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -22,11 +22,19 @@ const EmailInput = ({ navigation }) => {
         }
         else {
             Alert.alert("Email is Correct");
+            return true
         }
     }
+    const dataFunc = (x) => {
+        return 5 * x
+    }
 
-    const on_submit = () =>{
+    const on_submit = () => {
         validateEmail(email)
+    }
+
+    const onSubmitLogin = (text) => {
+        console.log(text)
     }
 
     return (
@@ -34,7 +42,7 @@ const EmailInput = ({ navigation }) => {
 
             <View style={styles.feedback_view}>
                 <TextInput
-                testID="email-input"
+                    testID="email-input"
                     style={{
                         margin: 15,
                         height: 40,
@@ -48,16 +56,34 @@ const EmailInput = ({ navigation }) => {
                     onChangeText={(text) => { setEmail(text) }}
                     value={email}
                 />
+
+                <TextInput
+                    placeholder='Email Address'
+                    testID='#email'
+                    accessibilityLabel='#email'
+                    blurOnSubmit={false}
+                    //  onEndEditing={onSubmitLogin()}
+                    onChangeText={(text) => { onSubmitLogin(text) }}
+                >
+                </TextInput>
             </View>
 
             <View style={styles.orderBtnView}>
-                <TouchableOpacity style={styles.order_btn}
-                testID="submit-btn"
+                {/* <TouchableOpacity style={styles.order_btn}
+                    testID="submit-btn"
                     onPress={() => { validateEmail(email) }}
                 >
                     <Text style={styles.order_txt}>Sumbit</Text>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
+                <Button
+                    title="Submit"
+                    onPress={() => { validateEmail(email) }}
+                    testID="submit-btn"
+                    accessibilityLabel="SubmitLabel"
+                />
             </View>
+
+
 
         </SafeAreaView>
     );
